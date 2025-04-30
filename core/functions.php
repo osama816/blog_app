@@ -90,7 +90,7 @@ function add_blog( $title, $content,$image)  {
     }
 
     $sql= "INSERT INTO `posts` (`title` ,`content`,`imags`,`user_id`,`create_at`)
-   VALUES('$title','$content','$relative_path','{$_SESSION['user']['id']}','now()')";
+   VALUES('$title','$content','$relative_path','{$_SESSION['user']['id']}',now())";
     $res = mysqli_query($conn, $sql);
     
     if($res){
@@ -99,6 +99,13 @@ function add_blog( $title, $content,$image)  {
         return false;
        }
 }
+function get_username($user_id)  {
+    $conn=$GLOBALS['conn'];
+    $sql= "SELECT `name` FROM users WHERE id='$user_id'";
+    $res = mysqli_query($conn, $sql);
+    return mysqli_fetch_assoc($res);
+}
+
 function update_blog( $title, $content,$image , $id)  {
   
     $blog =find_blog($id);
