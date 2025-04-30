@@ -7,10 +7,10 @@
                $user_name=get_username($blog["user_id"])['name'];
             ?>
             <!-- Post preview-->
-            <div class="post-preview">
+            <div class="post-preview text col-md-5 mx-auto">
                     <h2 class="post-title"><?=$blog['title']?></h2>  
                 <a href="index.php?page=show-blog&action=show&id=<?= $blog['id'] ?>">
-                <img width="150" src="<?=$_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']) . $blog['imags'] ?>">
+                <img width="250" height="250" src="<?=$_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']) . $blog['imags'] ?>">
                 </a>
                    <h3 class="post-subtitle"><?=$blog['content']?></h3>
                 <p class="post-meta">
@@ -20,7 +20,7 @@
                 </p>
             </div>
             <!-- Divider-->
-            <hr class="my-4" />
+            <hr class="my-5" />
              <?php endforeach;?>
             <!-- Pager-->
             <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
