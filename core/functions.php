@@ -68,6 +68,13 @@ function getBlogs()  {
     return mysqli_fetch_all($res, MYSQLI_ASSOC);
 
 }
+function All_Blogs()  {
+    $conn=$GLOBALS['conn'];
+    $sql= "SELECT * FROM posts ";
+    $res = mysqli_query($conn, $sql);
+    return mysqli_fetch_all($res, MYSQLI_ASSOC);
+
+}
 function add_blog( $title, $content,$image)  {
   
 

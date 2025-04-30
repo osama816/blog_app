@@ -8,7 +8,7 @@
     <div class="row gx-4 gx-lg-5 justify-content-center">
         <div class="col-md-10 col-lg-8 col-xl-7">
             <?php
-            foreach (getBlogs() as  $blog) :
+            foreach (All_Blogs() as  $blog) :
             ?>
             <!-- Post preview-->
             <div class="post-preview">
@@ -19,7 +19,7 @@
                 <img  src="<?=$_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']) . $blog['imags'] ?>">
                 <p class="post-meta">
                     Posted by
-                    <a href="#!"><?=$_SESSION['user']['name']?></a>
+                    <a href="#!"><?= isset($_SESSION['user']) ?  $_SESSION['user']['name']:"";?></a>
                     <?=$blog['create_at']?>
                 </p>
             </div>
