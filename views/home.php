@@ -8,13 +8,13 @@
             ?>
             <!-- Post preview-->
             <div class="post-preview">
-                <a href="">
-                    <h2 class="post-title"><?=$blog['title']?></h2>
-                    <h3 class="post-subtitle"><?=$blog['content']?></h3>
+                    <h2 class="post-title"><?=$blog['title']?></h2>  
+                <a href="index.php?page=show-blog&action=show&id=<?= $blog['id'] ?>">
+                <img width="150" src="<?=$_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']) . $blog['imags'] ?>">
                 </a>
-                <img  src="<?=$_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']) . $blog['imags'] ?>">
+                   <h3 class="post-subtitle"><?=$blog['content']?></h3>
                 <p class="post-meta">
-                    Posted by
+                    Posted by :
                     <a href="#!"><?=$user_name?></a>
                    <p> <?=$blog['create_at']?></p>
                 </p>

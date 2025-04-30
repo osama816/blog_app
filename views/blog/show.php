@@ -6,9 +6,10 @@
             $blog = find_blog($id);
         }
         ?>
-        <img height="300" src="<?= "http://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . $blog['imags'] ?>">
+        <div>title : <?= $blog['title'] ?></div>
+        <img height="500" width="300"  src="<?= "http://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . $blog['imags'] ?>">
         <div class="mt-5">
-            <div>title : <?= $blog['title'] ?></div>
+            
             <div>content : <?= $blog['content'] ?></div>
             <div>create_at : <?= $blog['create_at'] ?? date('Y-m-d') ?></div>
         </div>
