@@ -73,4 +73,23 @@ function validate_Login($email, $password)
     return null;
 }
 
+
+function validate_blog($title, $content,$image)
+{
+    $date =
+        [
+            "title" => $title,
+            "content" => $content,
+            "image" => $image
+        ];
+
+    foreach ($date as $key => $value) {
+        if ($error = validateRequired($value, $key)) {
+            return $error;
+        }
+    }
+
+
+    return null;
+}
 ?>

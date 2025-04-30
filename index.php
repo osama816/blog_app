@@ -28,7 +28,21 @@ switch ($page) {
     case 'login':
         include "./views/auth/login.php";
         break;
-
+    case 'blogs':
+        include "./views/blog/index.php";
+        break;
+    case 'add-blog':
+        include "./views/blog/create.php";
+        break;
+    case 'edit':
+        include "./views/blog/edit.php";
+        break;
+    case 'store-blog':
+        include "./controllers/blog/add_delete_controllers.php";
+        break;
+    case 'show-blog':
+        include "./views/blog/show.php";
+        break;
     default:
         include("./views/404-not-found.php");
         break;

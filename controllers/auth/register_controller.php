@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     foreach ($_POST as $key => $value) {
-        $$key = htmlspecialchars(trim($value));
+        $$key = trim($value);
     }
 
 

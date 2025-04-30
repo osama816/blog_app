@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <style>
     body {
-        display: flex;
+       
         justify-content: center;
         align-items: center;
         height: 100vh;
