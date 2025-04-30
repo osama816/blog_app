@@ -12,7 +12,7 @@
                     <h2 class="post-title"><?=$blog['title']?></h2>
                     <h3 class="post-subtitle"><?=$blog['content']?></h3>
                 </a>
-                <img  src="<?=$_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']) . $blog['imags'] ?>">
+                <img width="150" src="<?=$_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF']) . $blog['imags'] ?>">
                 <p class="post-meta">
                     Posted by
                     <a href="#!"><?=$user_name?></a>
