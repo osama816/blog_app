@@ -15,19 +15,19 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="assets/css/styles.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
 </head>
 
 <body>
     <!-- Navigation-->
      <?php include "nav.php" ?>
     <!-- Page Header-->
-    <header class="masthead" style="background-image: url('assets/img/home-bg.jpg')">
-        <div class="container position-relative px-4 px-lg-5">
+    <header class="masthead">
+        <div class="container position-relative px-2 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
-                    <div class="site-heading">
-                        <h1> Blog</h1>
-                        <span class="subheading"> Blog Theme by Start Bootstrap</span>
+                <div class="site-heading">
+                        <h1> Blog app</h1>
                     </div>
                 </div>
             </div>
