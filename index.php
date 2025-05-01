@@ -19,7 +19,9 @@ $inc=[
    'blogs'=> "./views/blog/index.php",
    'add-blog'=>  "./views/blog/create.php",
    'edit'=>"./views/blog/edit.php" ,
-   'store-blog'=>"./controllers/blog/add_delete_controllers.php" ,
+   'store-blog'=>"./controllers/blog/add_controllers.php" ,
+   'edit-blog'=>"./controllers/blog/edit_controllers.php" ,
+   'delete-blog'=>"./controllers/blog/delete_controllers.php" ,
    'show-blog'=>"./views/blog/show.php" 
 ];
 

@@ -1,0 +1,66 @@
+body {
+    background-color: #f4f7fa;
+}
+
+.post-card {
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.post-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+.user-name {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.masthead {
+    background-color: #000000 !important;
+    padding: 15px 0;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.site-heading h1 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* Blog Show Page Image Styles */
+.post-card img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 20px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Adjust card padding for show page */
+.show-page .post-card {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.show-page .card-body {
+    padding: 0;
+} 

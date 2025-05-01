@@ -9,7 +9,7 @@ if ($_GET['action']=="edit"&&isset($_GET['id'])) {
     <div class="d-flex justify-content-center align-items-center">
         <h1 class="mb-4">Edit Post</h1>
     </div>
-    <form method="post" action="index.php?page=store-blog&action=edit" enctype="multipart/form-data">
+    <form method="post" action="index.php?page=edit-blog&action=edit" enctype="multipart/form-data">
         <input type="hidden" name="id"value="<?=$id?>">
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>

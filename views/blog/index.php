@@ -27,7 +27,7 @@ $blogs = getBlogs();
                 <td>
                     <a href="index.php?page=show-blog&action=show&id=<?= $blog['id'] ?>" class="btn btn-sm btn-info">View</a>
                     <a href="index.php?page=edit&action=edit&id=<?= $blog['id'] ?>" class="btn btn-sm btn-warning">Edit</a>
-                    <form action="index.php?page=store-blog&action=delete" method="POST" style="display:inline-block;">
+                    <form action="index.php?page=delete-blog&action=delete" method="POST" style="display:inline-block;">
                         <input type="hidden" name="id" value="<?= $blog['id'] ?>">
                         <button type="submit" class="btn btn-sm btn-danger">Delete</button>
                     </form>

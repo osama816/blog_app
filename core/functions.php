@@ -121,7 +121,7 @@ function update_blog( $title, $content,$image , $id)  {
 
     if (!move_uploaded_file($image["tmp_name"],$image_path)) {
         setMessages("danger", "Failed to upload image.");
-        header('Location:./index.php?page=add-blog ');
+        header('Location:./index.php?page=blogs ');
         exit;
     }
 
