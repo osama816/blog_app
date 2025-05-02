@@ -38,8 +38,3 @@
     </div>
 </div>
 
-<!-- Footer-->
-
-    <!-- else {
-        echo "<h2 class='mb-4'>No Posts</h2>";
-    } -->
