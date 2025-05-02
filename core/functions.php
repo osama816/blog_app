@@ -68,9 +68,40 @@ function getBlogs()  {
     return mysqli_fetch_all($res, MYSQLI_ASSOC);
 
 }
-function All_Blogs()  {
+function get_myposts($page_num)  {
     $conn=$GLOBALS['conn'];
-    $sql= "SELECT * FROM posts ";
+    $page_limit=5;
+    
+    $offset=($page_num-1)*$page_limit;
+    $sql= "SELECT * FROM posts WHERE user_id = '{$_SESSION['user']['id']}' LIMIT $page_limit OFFSET $offset ";
+
+    $res = mysqli_query($conn, $sql);
+    return mysqli_fetch_all($res, MYSQLI_ASSOC);
+
+}
+function posts_number()  {
+    $conn=$GLOBALS['conn'];
+    $posts_query="SELECT COUNT(*) AS COUNT FROM posts";
+    $count=mysqli_fetch_assoc(mysqli_query($conn, $posts_query))["COUNT"];
+    $page_limit=5;
+    return $pag_number=ceil($count/$page_limit);
+    
+}
+function posts_number_myposts()  {
+    $conn=$GLOBALS['conn'];
+    $posts_query="SELECT COUNT(*) AS COUNT FROM posts WHERE user_id = '{$_SESSION['user']['id']}'";
+    $count=mysqli_fetch_assoc(mysqli_query($conn, $posts_query))["COUNT"];
+    $page_limit=5;
+    return $pag_number=ceil($count/$page_limit);
+    
+}
+function All_Blogs($page_num)  {
+    $conn=$GLOBALS['conn'];
+    $page_limit=5;
+    
+    $offset=($page_num-1)*$page_limit;
+    $sql= "SELECT * FROM posts LIMIT $page_limit OFFSET $offset";
+
     $res = mysqli_query($conn, $sql);
     return mysqli_fetch_all($res, MYSQLI_ASSOC);
 

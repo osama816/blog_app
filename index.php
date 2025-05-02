@@ -11,6 +11,7 @@ showMessages();
 
 $inc=[
    'home'=> "./views/home.php",
+   'my_posts'=> "./views/my_posts.php",
    'register'=> "./views/auth/register.php",
    'sign-up'=>"./controllers/auth/register_controller.php" ,
    'sign-in'=>"./controllers/auth/login_controllers.php" ,
