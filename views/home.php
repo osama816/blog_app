@@ -1,6 +1,6 @@
 <!-- Main Content-->
 <link rel="stylesheet" href="<?= $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/assets/css/style.css' ?>">
-<?Php  $page_num=$_GET['page_num']??1?>
+<?Php $page_num = $_GET['page_num'] ?? 1 ?>
 <div class="container px-4 px-lg-5">
     <div class="row gx-4 gx-lg-5 justify-content-center">
         <div class="col-md-10 col-lg-8 col-xl-7">
@@ -31,23 +31,24 @@
                     </div>
                     <!-- Divider-->
                     <hr class="my-5" />
-            <?php endforeach;
-                 else: ?>
-                    <div class="alert alert-info">No Posts Found</div>
-                <?php endif; 
-             ?>
+                <?php endforeach;
+            else: ?>
+                <div class="alert alert-info">No Posts Found</div>
+            <?php endif;
+            ?>
         </div>
         </main>
     </div>
 </div>
 <nav class="d-flex justify-content-center" aria-label="...">
-  <ul class="pagination">
-    <?php
-    for ($i=1; $i <= posts_number(); $i++) :
-    ?>
-    <li class="page-item <?=$i==$page_num?'active':''?> " aria-current="page">
-      <a class="page-link" href="?page_num=<?=$i?>"><?=$i?></a>
-    </li>
-<?php endfor;?>
-  </ul>
+    <ul class="pagination">
+        <?php
+        for ($i = 1; $i <= posts_number(); $i++) :
+        ?>
+            <li class="page-item <?= $i == $page_num ? 'active' : '' ?> " aria-current="page">
+                <a class="page-link" href="?page_num=<?= $i ?>"><?= $i ?></a>
+            </li>
+        <?php endfor; ?>
+    </ul>
 </nav>
+<!-- <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="?page_num=2">Older Posts →</a></div> -->
